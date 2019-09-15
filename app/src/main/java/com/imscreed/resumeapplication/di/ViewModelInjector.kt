@@ -1,6 +1,6 @@
 package com.imscreed.resumeapplication.di
 
-import com.imscreed.resumeapplication.ui.home.ResumeViewModel
+import com.imscreed.resumeapplication.ui.resume.ResumeViewModel
 import dagger.Component
 import javax.inject.Singleton
 

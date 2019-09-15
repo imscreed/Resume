@@ -2,7 +2,7 @@ package com.imscreed.resumeapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.imscreed.resumeapplication.ui.home.ResumeFragment
+import com.imscreed.resumeapplication.ui.resume.ResumeFragment
 
 class RouteActivity : AppCompatActivity() {
 

@@ -5,7 +5,7 @@ import com.imscreed.resumeapplication.ResumeApplication
 import com.imscreed.resumeapplication.di.ApplicationModule
 import com.imscreed.resumeapplication.di.DaggerViewModelInjector
 import com.imscreed.resumeapplication.di.ViewModelInjector
-import com.imscreed.resumeapplication.ui.home.ResumeViewModel
+import com.imscreed.resumeapplication.ui.resume.ResumeViewModel
 
 abstract class BaseViewModel: ViewModel(){
     private val injector: ViewModelInjector = DaggerViewModelInjector

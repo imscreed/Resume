@@ -1,6 +1,5 @@
-package com.imscreed.resumeapplication.ui.home
+package com.imscreed.resumeapplication.ui.resume
 
-import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import com.imscreed.resumeapplication.AppConstants.userId
 import com.imscreed.resumeapplication.base.BaseViewModel
@@ -19,7 +18,7 @@ class ResumeViewModel: BaseViewModel(){
         get() = parentJob + Dispatchers.Default
     private val scope = CoroutineScope(coroutineContext)
 
-    val resumeLiveData = MutableLiveData<String>()
+    val resumeLiveData = MutableLiveData<ResumeDataModel>()
 
     fun getResume(){
         scope.launch {

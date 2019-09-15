@@ -1,13 +1,15 @@
-package com.imscreed.resumeapplication.ui.home
+package com.imscreed.resumeapplication.ui.resume
 
-import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
 import com.imscreed.resumeapplication.R
+import com.imscreed.resumeapplication.model.data.ResumeDataModel
+import com.imscreed.resumeapplication.util.ViewUtil
 import kotlinx.android.synthetic.main.main_fragment.*
 
 
@@ -31,15 +33,10 @@ class ResumeFragment : Fragment() {
         viewModel = ViewModelProviders.of(this).get(ResumeViewModel::class.java)
         viewModel.getResume()
 
-
-        // Create the observer which updates the UI.
-        val resumeObserver = Observer<String> { resume ->
-            // Update the UI, in this case, a TextView.
-            content_text.text = resume
+        val resumeObserver = Observer<ResumeDataModel> { resume ->
+            content_text.text = ViewUtil.getStylizedResume(requireContext(), resume)
         }
 
-        // Observe the LiveData, passing in this activity as the LifecycleOwner and the observer.
         viewModel.resumeLiveData.observe(this, resumeObserver)
     }
-
 }
