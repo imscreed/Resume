@@ -14,9 +14,13 @@ import javax.inject.Singleton
 @Module
 class ApplicationModule(private val application: ResumeApplication) {
 
-    @Provides @Singleton fun provideApplicationContext(): Context = application
+    @Provides
+    @Singleton
+    fun provideApplicationContext(): Context = application
 
-    @Provides @Singleton fun provideRetrofit(): Retrofit {
+    @Provides
+    @Singleton
+    fun provideRetrofit(): Retrofit {
         return Retrofit.Builder()
             .baseUrl(BuildConfig.BASE_URL)
             .client(createClient())
@@ -32,5 +36,4 @@ class ApplicationModule(private val application: ResumeApplication) {
         }
         return okHttpClientBuilder.build()
     }
-
 }
