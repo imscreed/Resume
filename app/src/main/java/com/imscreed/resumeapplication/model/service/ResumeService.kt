@@ -10,5 +10,5 @@ class ResumeService
 @Inject constructor(retrofit: Retrofit): ResumeApi {
     private val resumeApi by lazy { retrofit.create(ResumeApi::class.java) }
 
-    override fun getResume(userId: String) = resumeApi.getResume(userId)
+    override fun getResumeFromRemote(userId: String) = resumeApi.getResumeFromRemote(userId)
 }
