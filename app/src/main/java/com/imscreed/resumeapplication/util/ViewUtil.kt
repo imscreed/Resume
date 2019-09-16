@@ -126,16 +126,25 @@ class ViewUtil {
                     color(ContextCompat.getColor(context, R.color.black)) {
                         append(education.area)
                     }
-                    append("\n\n\n")
+                    append("\n")
                     append(education.studyType)
+                    append("\n\n\n")
+                    scale(1.25f) {
+                        bold {
+                            color(ContextCompat.getColor(context, R.color.colorPrimary)) {
+                                append("Links".toUpperCase())
+                            }
+                        }
+                    }
+                    append("\n\n")
                     bold {
-                        append("email")
+                        append("email".toUpperCase())
                     }
                     append("\n")
                     append(user.email)
                     append("\n\n")
                     bold {
-                        append("website")
+                        append("website".toUpperCase())
                     }
                     append("\n")
                     append(user.website)
@@ -143,7 +152,7 @@ class ViewUtil {
                     user.profiles.forEach {
                         append("\n\n")
                         bold {
-                            append(it.network)
+                            append(it.network.toUpperCase())
                         }
                         append("\n")
                         append(it.url)
