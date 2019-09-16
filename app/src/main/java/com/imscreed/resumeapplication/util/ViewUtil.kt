@@ -24,7 +24,7 @@ class ViewUtil {
 
             val stylizedString: SpannedString = buildSpannedString {
 
-                color(ContextCompat.getColor(context, R.color.black)) {
+                color(ContextCompat.getColor(context, R.color.colorPrimary)) {
                     scale(1.75f) {
                         bold {
                             append(firstName)
@@ -38,9 +38,11 @@ class ViewUtil {
                     append(user.label)
                 }
                 append("\n\n\n")
-                bold {
-                    color(ContextCompat.getColor(context, R.color.black)) {
-                        append("Summary".toUpperCase())
+                scale(1.25f) {
+                    bold {
+                        color(ContextCompat.getColor(context, R.color.colorPrimary)) {
+                            append("Summary".toUpperCase())
+                        }
                     }
                 }
                 append("\n\n")

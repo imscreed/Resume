@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Resume Viewer</string>
+    <string name="loading">Loading Resume...</string>
 </resources>
