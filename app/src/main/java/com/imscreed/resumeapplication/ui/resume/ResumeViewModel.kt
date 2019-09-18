@@ -1,6 +1,7 @@
 package com.imscreed.resumeapplication.ui.resume
 
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.viewModelScope
 import com.imscreed.resumeapplication.AppConstants.userId
 import com.imscreed.resumeapplication.base.BaseViewModel
 import com.imscreed.resumeapplication.model.data.ResumeDataModel
@@ -13,19 +14,16 @@ class ResumeViewModel: BaseViewModel(){
     @Inject
     lateinit var repository: ResumeRepository
 
-    private val parentJob = Job()
-    private val coroutineContext: CoroutineContext
-        get() = parentJob + Dispatchers.Default
-    private val scope = CoroutineScope(coroutineContext)
-
     val resumeLiveData = MutableLiveData<ResumeDataModel>()
 
-    fun getResume(){
-        scope.launch {
+    fun getResume() {
+        viewModelScope.launch {
             val resume = repository.fetchResumeFromRemote(userId)
-            resumeLiveData.postValue(resume)
+            save(resume)
         }
     }
 
-    fun cancelAllRequests() = coroutineContext.cancel()
+    fun save(resume: ResumeDataModel?) {
+        resumeLiveData.postValue(resume)
+    }
 }
