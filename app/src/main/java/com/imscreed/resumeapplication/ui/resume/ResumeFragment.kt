@@ -10,7 +10,7 @@ import androidx.lifecycle.ViewModelProviders
 import com.imscreed.resumeapplication.R
 import com.imscreed.resumeapplication.model.data.ResumeDataModel
 import com.imscreed.resumeapplication.util.ViewUtil
-import kotlinx.android.synthetic.main.main_fragment.*
+import kotlinx.android.synthetic.main.resume_fragment.*
 
 
 class ResumeFragment : Fragment() {
@@ -25,7 +25,7 @@ class ResumeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        return inflater.inflate(R.layout.main_fragment, container, false)
+        return inflater.inflate(R.layout.resume_fragment, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

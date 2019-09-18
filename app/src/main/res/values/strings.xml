@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">Resume Viewer</string>
     <string name="loading">Loading Resume...</string>
+    <string name="auth_required">Authentication Required</string>
+    <string name="auth_required_description">You can view sensitive data only after authenticating your identity</string>
+    <string name="authenticate_and_view">Authenticate and View</string>
+    <string name="biometric_title">Identity verification required</string>
+    <string name="biometric_message">Access Data</string>
+    <string name="cancel">Cancel</string>
+
 </resources>
