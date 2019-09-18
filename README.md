@@ -9,3 +9,5 @@ Here is the specification of the project in general
 * Dagger2 for Dependency Injection
 * Mockito for Unit Testing
 * Espresso for UI testing
+
+![screenshot](https://media.giphy.com/media/Jpe8jXXeD1ZgNis3ey/giphy.gif)
